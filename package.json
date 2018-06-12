@@ -3,12 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.8",
+    "@fortawesome/fontawesome-free-solid": "^5.0.13",
+    "@fortawesome/react-fontawesome": "0.0.20",
     "firebase": "^5.0.4",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "react-redux": "^5.0.7",
     "react-redux-firebase": "^2.1.5",
-    "redux": "^4.0.0"
+    "redux": "^4.0.0",
+    "s3-easy-deploy": "^1.0.1",
+    "styled-components": "^3.3.2"
   },
   "devDependencies": {
     "react-scripts": "1.1.4"
@@ -17,6 +22,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy-prod": "s3-easy-deploy --public-root ./build/static/js --bucket landing-lion-permitting"
   }
 }
