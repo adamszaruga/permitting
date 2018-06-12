@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
-import { Main, Sidebar, Content, Logo, Nav, NavItem, Account, AccountName, Upgrade } from './components/helpers.js';
+import { Main, Sidebar, Content, 
+	     Logo, Nav, NavItem, 
+	     Account, AccountName, Upgrade, 
+	     ContentHeader, ContentBody, Title,
+	     Actions, Table, ActionButton,
+	     TableHeader, TableRow, TableColumn } from './components/helpers.js';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import faUserCircle from '@fortawesome/fontawesome-free-solid/faUserCircle'
 
@@ -10,7 +15,7 @@ class Dashboard extends Component {
   render() {
     let { firebase } = this.props;
     return (
-      <div className="Dashboard">
+    <div className="Dashboard">
       	<div className="container">
 	      	<Main>
 	      		<Sidebar>
@@ -27,10 +32,57 @@ class Dashboard extends Component {
 	      			</Account>
 	      			<Upgrade>Upgrade</Upgrade>
 	      		</Sidebar>
-	      		<Content>This is the content</Content>
+	      		<Content>
+	      			<ContentHeader>
+	      				<Title>Permits</Title>
+	      				<Actions>
+	      					<ActionButton>New Permit</ActionButton>
+	      				</Actions>
+	      			</ContentHeader>
+	      			<ContentBody>
+	      				<Table>
+	      					<TableHeader>
+	      						<TableColumn>Project</TableColumn>
+	      						<TableColumn>Applicant</TableColumn>
+	      						<TableColumn>Contractor</TableColumn>
+	      						<TableColumn>Owner</TableColumn>
+	      					</TableHeader>
+	      					<TableRow>
+	      						<TableColumn>Medlock Bridge</TableColumn>
+	      						<TableColumn>Adam Szaruga</TableColumn>
+	      						<TableColumn>Security Vault Works</TableColumn>
+	      						<TableColumn>Bank of America</TableColumn>
+	      					</TableRow>
+	      					<TableRow>
+	      						<TableColumn>Medlock Bridge</TableColumn>
+	      						<TableColumn>Adam Szaruga</TableColumn>
+	      						<TableColumn>Security Vault Works</TableColumn>
+	      						<TableColumn>Bank of America</TableColumn>
+	      					</TableRow>
+	      					<TableRow>
+	      						<TableColumn>Medlock Bridge</TableColumn>
+	      						<TableColumn>Adam Szaruga</TableColumn>
+	      						<TableColumn>Security Vault Works</TableColumn>
+	      						<TableColumn>Bank of America</TableColumn>
+	      					</TableRow>
+	      					<TableRow>
+	      						<TableColumn>Medlock Bridge</TableColumn>
+	      						<TableColumn>Adam Szaruga</TableColumn>
+	      						<TableColumn>Security Vault Works</TableColumn>
+	      						<TableColumn>Bank of America</TableColumn>
+	      					</TableRow>
+	      					<TableRow>
+	      						<TableColumn>Medlock Bridge</TableColumn>
+	      						<TableColumn>Adam Szaruga</TableColumn>
+	      						<TableColumn>Security Vault Works</TableColumn>
+	      						<TableColumn>Bank of America</TableColumn>
+	      					</TableRow>
+	      				</Table>
+	      			</ContentBody>
+	      		</Content>
 	      	</Main>
       	</div>
-      </div>
+    </div>
     );
   }
 }
